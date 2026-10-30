@@ -10,7 +10,7 @@ Hemos diseñado la arquitectura visual base inspirada en lo mejor del minimalism
 * **Componentes del Dock:** Programar el comportamiento nativo de arrastrar y soltar iconos en la barra flotante.
 * **Sistema de ventanas:** Implementar la lógica para que las ventanas se puedan redimensionar y superponer sin consumir memoria extra.
 * **Aplicaciones base:** Ayudar a maquetar el explorador de archivos básico y los menús de la barra superior.
-* **Kernel:**Mejoras en el kernel de compatibilidad estabilidad y calidad.
+* **Kernel:** Mejoras en el kernel de compatibilidad estabilidad y calidad.
 
 ## 📄 Licencia
 Este proyecto está bajo la **Licencia MIT**. Al colaborar, aceptas que tus contribuciones se mantengan bajo esta licencia libre y permisiva.
