@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid OS - Versión Comunitaria</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body {
+            background: linear-gradient(135deg, #1f1c2c, #928dab, #1f1c2c);
+            background-size: 400% 400%;
+            animation: fluidBackground 15s ease infinite;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        @keyframes fluidBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        /* Top Bar Estilo macOS */
+        .top-bar {
+            width: 100%;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+            font-size: 13px;
+            font-weight: 500;
+            z-index: 1000;
+        }
+        /* Ventana Liquid Glass */
+        .window {
+            width: 600px;
+            height: 350px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .window-header {
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .buttons { display: flex; gap: 8px; }
+        .btn { width: 12px; height: 12px; border-radius: 50%; }
+        .btn-close { background: #ff5f56; }
+        .btn-min { background: #ffbd2e; }
+        .btn-max { background: #27c93f; }
+        .window-title { color: rgba(255,255,255,0.8); font-size: 13px; margin: auto; font-weight: 600; padding-right: 40px; }
+        .window-content { padding: 30px; color: white; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        .window-content h1 { font-size: 28px; margin-bottom: 10px; font-weight: 700; letter-spacing: -0.5px; }
+        .window-content p { color: rgba(255,255,255,0.7); font-size: 15px; max-width: 400px; margin: 0 auto 20px; }
+        /* Dock Flotante Magnífico */
+        .dock-container { width: 100%; display: flex; justify-content: center; padding-bottom: 20px; z-index: 1000; }
+        .dock {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            padding: 10px 20px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            gap: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .dock-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.2s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .dock-icon:hover { transform: scale(1.2) translateY(-10px); background: rgba(255, 255, 255, 0.3); }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <span style="font-weight: 700; margin-right: 20px;"> Fluid OS</span>
+        <span style="margin-right: 15px; opacity: 0.8;">Archivo</span>
+        <span style="margin-right: 15px; opacity: 0.8;">Desarrollo</span>
+        <span style="opacity: 0.8;">Comunidad</span>
+    </div>
+
+    <div class="window">
+        <div class="window-header">
+            <div class="buttons">
+                <div class="btn btn-close"></div>
+                <div class="btn btn-min"></div>
+                <div class="btn btn-max"></div>
+            </div>
+            <div class="window-title">Fluid OS - Bienvenido</div>
+        </div>
+        <div class="window-content">
+            <h1>Fluid OS v1.0</h1>
+            <p>El sistema operativo del futuro con interfaz Liquid Glass. Repositorio comunitario abierto para optimización y desarrollo de funciones básicas.</p>
+        </div>
+    </div>
+
+    <div class="dock-container">
+        <div class="dock">
+            <div class="dock-icon" title="Sistema">💻</div>
+            <div class="dock-icon" title="Archivos">📂</div>
+            <div class="dock-icon" title="Notas">📝</div>
+            <div class="dock-icon" title="Seguridad">🔒</div>
+        </div>
+    </div>
+
+</body>
+</html>
